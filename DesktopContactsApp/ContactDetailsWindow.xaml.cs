@@ -25,6 +25,10 @@ namespace DesktopContactsApp
         {
             InitializeComponent();
 
+            // Opens the new window in the same frame as the MainWindow
+            Owner = Application.Current.MainWindow;
+            WindowStartupLocation = WindowStartupLocation.CenterOwner;
+
             this.contact = contact;
 
             NameTextBox.Text = contact.Name;
